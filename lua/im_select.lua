@@ -20,7 +20,7 @@ You can install it at: https://github.com/daipeihust/im-select ]])
 		default_im_select = opts.im_select_default_im_select
 	end
 
-	vim.api.nvim_create_autocmd({ "InsertEnter " }, {
+	vim.api.nvim_create_autocmd({ "InsertEnter" }, {
 		callback = function()
 			local current_select = all_trim(vim.fn.system({ "im-select" }))
 			local save = vim.g["im_select_current_im_select"]
@@ -31,7 +31,7 @@ You can install it at: https://github.com/daipeihust/im-select ]])
 		end,
 	})
 
-	vim.api.nvim_create_autocmd({ "InsertLeave " }, {
+	vim.api.nvim_create_autocmd({ "InsertLeave" }, {
 		callback = function()
 			local current_select = all_trim(vim.fn.system({ "im-select" }))
 			vim.api.nvim_set_var("im_select_current_im_select", current_select)
