@@ -22,6 +22,7 @@ M.setup = function(opts)
 	end
 
 	vim.api.nvim_create_autocmd({ "InsertLeave", "VimEnter" }, {
+		callback = function()
 			vim.fn.system({ "im-select", default_im_select })
 		end,
 	})
